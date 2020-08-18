@@ -21,8 +21,8 @@ if ( isset( $_POST['longUrl'] ) && ! empty( $_POST['longUrl'] ) ){
    $longUrl = $_POST['longUrl'];
    $shortener = new Shortener($db);
 
-   $shortURL_Prefix = 'https://autopole.ru/r/'; // with URL rewrite
- 
+   //$shortURL_Prefix = 'https://autopole.ru/r/'; // with URL rewrite
+  $shortURL_Prefix = __DIR__ . '/r/';
  try{
     // Get short code of the URL
     $shortCode = $shortener->urlToShortCode($longUrl);
